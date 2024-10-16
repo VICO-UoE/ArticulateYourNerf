@@ -5,11 +5,11 @@
 
 </div>
 
-[Jianning Deng](), [Kartic Subr](), [Hakan Bilen]()
+[Jianning Deng](https://djning.github.io/), [Kartic Subr](https://homepages.inf.ed.ac.uk/ksubr/), [Hakan Bilen](https://homepages.inf.ed.ac.uk/hbilen/)
 
 [![arXiv](https://img.shields.io/badge/arXiv-2309.17336-b31b1b.svg)](https://arxiv.org/abs/2406.16623) | [![ ](https://img.shields.io/youtube/views/378lnj2ku60?label=Demo&style=flat)](about:blank) 
 
-This is the official repository of **Articulate your NeRF: Unsupervised articulated object modeling via conditional view synthesis**. For technical details please refer to our paper on NIPS 2024:
+This is the official repository of **Articulate your NeRF: Unsupervised articulated object modeling via conditional view synthesis**. For technical details please refer to our paper on NeurIPS 2024:
 
 
 
