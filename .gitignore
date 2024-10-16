@@ -25,4 +25,4 @@ data_gen/test
 data_gen/*.ipynb
 data_gen/*.py
 data_gen/*.urdf
-toy_car*
+# toy_car*
