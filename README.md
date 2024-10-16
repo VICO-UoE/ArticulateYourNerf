@@ -54,7 +54,7 @@ Change the config file for the object you want.
 
 
 ### Real-world scan
-<img src="./assets/toy_car.gif" width="540" height="960"/>
+<img src="./assets/toy_car_loop.gif" width="540" height="960"/>
 
 ## Citation
 If you find our work useful in your research, please consider citing:
