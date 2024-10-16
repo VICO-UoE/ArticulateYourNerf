@@ -16,7 +16,7 @@ results_stable
 results*
 toy_car
 draft
-*.gif
+# *.gif
 *.mp4
 # *.sh
 temp
