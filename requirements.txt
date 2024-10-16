@@ -1,0 +1,7 @@
+einops
+open3d
+kornia
+numpy==1.26
+numba
+trimesh
+opencv-python

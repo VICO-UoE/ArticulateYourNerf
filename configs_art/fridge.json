@@ -1,0 +1,20 @@
+{
+    "root_dir": "load_paris/sapien/fridge/10905",
+    "output_dir": "results_ablation",
+    "exp_name": "fridge_end_to_start_f100",
+    "eval_step": 2000,
+    "near_plane": 2.0,
+    "far_plane": 7.0,
+    "seg_classes": 2,
+    "pre_trained_weights": "results_stable/fridge_end/ckpt/020000.pth",
+    "max_steps": 10000,
+    "batch_size": 8192,
+    "img_wh": [800, 800],
+    "use_num_frames": 100,
+    "accum_steps": 1000,
+    "motion_gt_json": "data_paris/sapien/fridge/10905/textured_objs/trans.json",
+    "state": "start",
+    "use_art_seg_estimator": true,
+    "use_se3": true,
+    "motion_type": "r"
+}

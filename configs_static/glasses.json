@@ -1,0 +1,12 @@
+{
+    "root_dir": "load_paris/sapien/glasses/102599",
+    "output_dir": "results_stable",
+    "exp_name": "glasses_end",
+    "eval_step": 5000,
+    "near_plane": 2.0,
+    "far_plane": 7.0,
+    "max_steps": 20000,
+    "batch_size": 8192,
+    "img_wh": [800, 800],
+    "state": "end"
+}
