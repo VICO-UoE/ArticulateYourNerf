@@ -26,3 +26,4 @@ data_gen/*.ipynb
 data_gen/*.py
 data_gen/*.urdf
 # toy_car*
+load_paris

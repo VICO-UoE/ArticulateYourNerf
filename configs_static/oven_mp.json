@@ -1,6 +1,6 @@
 {
     "root_dir": "load_paris/sapien/oven_mp/7179",
-    "output_dir": "results_stable",
+    "output_dir": "results_static",
     "exp_name": "oven_mp_start",
     "eval_step": 5000,
     "near_plane": 1.5,

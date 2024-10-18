@@ -1,6 +1,6 @@
 {
     "root_dir": "load_paris/sapien/laptop/10211",
-    "output_dir": "results_stable",
+    "output_dir": "results_static",
     "exp_name": "laptop_start",
     "eval_step": 5000,
     "near_plane": 2.0,

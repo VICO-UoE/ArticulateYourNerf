@@ -1,6 +1,6 @@
 {
     "root_dir": "load_paris/sapien/fridge/10905",
-    "output_dir": "results_stable",
+    "output_dir": "results_static",
     "exp_name": "fridge_end",
     "eval_step": 5000,
     "near_plane": 1.5,

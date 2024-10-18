@@ -1,6 +1,6 @@
 {
     "root_dir": "load_paris/sapien/glasses/102599",
-    "output_dir": "results_stable",
+    "output_dir": "results_static",
     "exp_name": "glasses_end",
     "eval_step": 5000,
     "near_plane": 2.0,

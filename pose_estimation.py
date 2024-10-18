@@ -725,15 +725,15 @@ class PoseEstimator():
         # self.idx_list = np.array(selected_frames)
         # self.idx_list = np.array([44, 12, 28, 35, 10, 63, 51, 13, 20, 97,  1, 73, 56, 30, 95])
         # self.idx_list = np.array(selected_frames)
-        gt_path = self.output_path / 'train_set'
-        gt_path.mkdir(exist_ok=True)
+        # gt_path = self.output_path / 'train_set'
+        # gt_path.mkdir(exist_ok=True)
         
-        w, h = self.dataset.img_wh
-        for frame_idx in self.idx_list:
-            rgb_gt = self.dataset.rgb[frame_idx].view(w, h, 3).permute(2, 0, 1)
-            rgb_pil = tvf.to_pil_image(rgb_gt)
-            fname = gt_path / f'{frame_idx:4d}.png'
-            rgb_pil.save(str(fname))
+        # w, h = self.dataset.img_wh
+        # for frame_idx in self.idx_list:
+        #     rgb_gt = self.dataset.rgb[frame_idx].view(w, h, 3).permute(2, 0, 1)
+        #     rgb_pil = tvf.to_pil_image(rgb_gt)
+        #     fname = gt_path / f'{frame_idx:4d}.png'
+        #     rgb_pil.save(str(fname))
         
         
     def scan_nerf(self):
@@ -841,11 +841,11 @@ class PoseEstimator():
         rgb_diff_valid = rgb_diff[rgb_diff>0]
         threshold = rgb_diff_valid.max() * 0.5
         mask = rgb_diff > threshold
-        save_path = self.output_path / 'debug_important_pixel'
-        save_path.mkdir(exist_ok=True)
-        fname = str(frame_idx) + '.png'
-        mask_pil = tvf.to_pil_image(mask.view(1, 800, 800).to(rgb_gt))
-        mask_pil.save(str(save_path/fname))
+        # save_path = self.output_path / 'debug_important_pixel'
+        # save_path.mkdir(exist_ok=True)
+        # fname = str(frame_idx) + '.png'
+        # mask_pil = tvf.to_pil_image(mask.view(1, 800, 800).to(rgb_gt))
+        # mask_pil.save(str(save_path/fname))
         pix_idx = torch.arange(rgb_diff.shape[0]).to(rgb_pred)
         valid_pix_idx = pix_idx[rgb_diff > threshold]
         img_idx = torch.ones_like(valid_pix_idx) * frame_idx
@@ -876,10 +876,10 @@ class PoseEstimator():
         self.nerf_part_pts = torch.Tensor(np.asarray(inliner.points)).to(self.src_pts)
         
          # save co_mask
-        occu_mask_fname = self.output_path / 'co_mask.pth'
-        occu_mask_tensor = torch.cat(self.occupy_mask_list, dim=0)
-        torch.save(occu_mask_tensor, occu_mask_fname)
-        self.occu_mask_fname = occu_mask_fname
+        # occu_mask_fname = self.output_path / 'co_mask.pth'
+        # occu_mask_tensor = torch.cat(self.occupy_mask_list, dim=0)
+        # torch.save(occu_mask_tensor, occu_mask_fname)
+        # self.occu_mask_fname = occu_mask_fname
         
     def construct_learnable_param(self):
         if self.use_se3:
@@ -1093,8 +1093,8 @@ class PoseEstimator():
         # inliers, _ = pcd.remove_statistical_outlier(nb_neighbors=10, std_ratio=1)
         
         
-        fname = self.output_path / 'nerf_scan_checked.ply'
-        o3d.io.write_point_cloud(str(fname), filtered)
+        # fname = self.output_path / 'nerf_scan_checked.ply'
+        # o3d.io.write_point_cloud(str(fname), filtered)
         filter_scr_pts = torch.Tensor(np.asarray(cluster_pts)).to(self.src_pts)
         self.src_pts = filter_scr_pts
         
@@ -1302,11 +1302,11 @@ class PoseEstimator_multipart(PoseEstimator):
         pcd = o3d.geometry.PointCloud()
         pcd.points = o3d.utility.Vector3dVector(pts.cpu().numpy())
         # pcd_final, _ = pcd.remove_statistical_outlier(nb_neighbors=20, std_ratio=1)
-        fname = self.output_path / 'nerf_scan.ply'
+        # fname = self.output_path / 'nerf_scan.ply'
         down_pcd = pcd.voxel_down_sample(3/128)
         down_pts = torch.Tensor(np.asarray(down_pcd.points)).to(pts)
         
-        o3d.io.write_point_cloud(str(fname), down_pcd)
+        # o3d.io.write_point_cloud(str(fname), down_pcd)
         self.src_pts = down_pts
         
     def construct_learnable_param(self):

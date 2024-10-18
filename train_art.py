@@ -81,9 +81,9 @@ if __name__ == '__main__':
     )
     pose_lr = 1e-1
     # load pose estimator
-    print('=' * 100)
-    print('=' * 40, 'loading coarse pose estimator', '=' * 40)
-    print('=' * 100)
+    # print('=' * 100)
+    # print('=' * 40, 'loading coarse pose estimator', '=' * 40)
+    # print('=' * 100)
     # pretrain_cfg = opts.pretrained_config
     # pretrain_strs = ["--config", pretrain_cfg]
     # pretrain_opts = get_opts(pretrain_strs)
@@ -92,9 +92,9 @@ if __name__ == '__main__':
     pretran_model = NGP_Prop_Wrapper(opts, training=False)
     
     renderer = NGPevaluator(opts, dataset=train_dataset, model=pretran_model)
-    print('=' * 100)
-    print('=' * 40, 'runing coarse pose estimation', '=' * 40)
-    print('=' * 100)
+    # print('=' * 100)
+    # print('=' * 40, 'runing coarse pose estimation', '=' * 40)
+    # print('=' * 100)
     if opts.idx_list is None:
         idx_list = None
     else:
