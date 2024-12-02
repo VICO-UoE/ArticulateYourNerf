@@ -15,7 +15,7 @@ This is the official repository of **Articulate your NeRF: Unsupervised articula
 1. Create and activate a new environment with Anaconda for this project:
 
 ```bash
-conda create -n art_nerf python=3.10
+conda create -n art_nerf python=3.9
 conda activate art_nerf
 ```
 
